@@ -139,7 +139,6 @@ What a wonderful image to test the responsiveness:
 | in      | this | wonderful | table  |
 | 10      | 11   |       506 | 13     |
 
-
 ## Footnotes
 
 Here is a footnote[^1], and another.[^another]
