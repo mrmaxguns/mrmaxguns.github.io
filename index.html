@@ -1,0 +1,343 @@
+---
+layout: default
+head: <link rel="stylesheet" href="/assets/css/home.css">
+---
+
+{% comment %}
+The homepage of my website.
+
+Copyright © 2021 Maxim Rebguns
+
+This file is part of The Blog of Maxim Rebguns.
+
+The source code of this website is free software: you can redistribute
+it and/or modify it under the terms of the GNU Affero General Public
+License as published by the Free Software Foundation, either version 3
+of the License, or (at your option) any later version.
+
+The source code of this website is distributed in the hope that it
+will be useful, but WITHOUT ANY WARRANTY; without even the implied
+warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See
+the GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public
+License along with the source code for this website.  If not, see
+<https://www.gnu.org/licenses/>.
+{% endcomment %}
+
+<header id="title">
+  <div>
+    <h1 class="title-text">Hi, I'm Maxim</h1>
+    <p class="subtitle-text">
+      I am
+      <span id="subtitle-whoami">a programmer</span><span>▮</span>
+    </p>
+  </div>
+</header>
+
+<nav id="navigation">
+  <ul class="nav-bar nav-open" id="navigation-bar">
+    <li class="nav-toggle">
+      <!-- This is the hamburger menu button that toggles the
+           visibility of the navigation. It shows up on small
+           devices. -->
+      <a
+        id="navigation-toggle"
+        href="javascript:void(0);"
+        aria-label="toggle visibility of the navigation menu"
+        role="button">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="currentColor"
+          class="bi bi-list"
+          viewBox="0 0 16 16">
+          <title>toggle visibility of the navigation menu</title>
+          <path
+            fill-rule="evenodd"
+            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0
+               1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5
+               0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0
+               1H3a.5.5 0 0 1-.5-.5z"/>
+        </svg>
+      </a>
+    </li>
+    <!-- The actual navigation begins here. -->
+    {% for item in site.data.navigation %}
+    <li>
+      <a
+        href="{% link {{ item.page }} %}"
+        {% if page.path == item.page %}
+        class="nav-active"
+        {% endif %}>
+        {{ item.name }}
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</nav>
+
+<main>
+  <section class="topic-container" id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>Programming Languages
+        <ul>
+          <li>Python</li>
+          <li>JavaScript</li>
+          <li>C</li>
+          <li>Bash and sh</li>
+        </ul>
+      </li>
+      <li>Front-end development
+        <ul>
+          <li>HTML, CSS, and JS</li>
+          <li>Beginner knowledge of JQuery and VueJS</li>
+        </ul>
+      </li>
+      <li>Back-end development
+        <ul>
+          <li>Django (Python)</li>
+          <li>SQL, PostgreSQL</li>
+        </ul>
+      </li>
+      <li>Game development
+        <ul>
+          <li>Pygame</li>
+          <li>Godot</li>
+        </ul>
+      </li>
+      <li>System administration
+        <ul>
+          <li>Bash and other posix compliant shells</li>
+          <li>GNU utilities including Make</li>
+          <li>Extensive knowledge of GNU/Linux</li>
+        </ul>
+      </li>
+    </ul>
+    <p>
+      I like to work on what interets me. One week, I'm learning
+      Numpy, the next I'm learning CSS animations. Some topics
+      interest me more. I often spend weeks or months on those,
+      applying them in real-world projects. My favorite
+      language&mdash;Python allows me to experiment with various
+      disciplines from machine learning to backend development.
+    </p>
+  </section>
+
+  <section class="topic-container" id="hobbies">
+    <h2>Hobbies</h2>
+    <p>
+      In my free time I enjoy programming. I develop free software for
+      everyone to use. Most of my programming projects are freely
+      licensed and can be found on
+      <a href="https://github.com/mrmaxguns">my GitHub page</a>. I
+      find solving problems with computer programs exciting, and I
+      also like to design software that can be put to use in the real
+      world.
+    </p>
+    <p>
+      I am also interested in aviation. Although I don't have a
+      private pilot's license (I'm too young to get one), I hope to
+      obtain one and an instrument rating after that. For now, I fly
+      on my favorite flight simulator, XPlane, and read books about
+      the fascinating world of aviation.
+    </p>
+    <p>
+      I enjoy both mountain biking and swimming. I have been mountain
+      biking for over a year now and hope to continue learning new
+      tricks and techniques.
+    </p>
+  </section>
+
+  <section class="topic-container" id="projects">
+    <h2>Projects</h2>
+
+    <!-- PROJECT 1: My website -->
+    <div class="projects-container">
+      <article>
+        <h3>My Personal Website</h3>
+        <p>
+          What you're viewing right now is my personal website, a
+          project that I constantly work on. Here you can find my blog
+          and other documents that I've decided to publish. I decided
+          to make it with Jekyll as it's natively supported by GitHub
+          and I like the simplicity of the static site generator.
+          Working on this project taught me a lot about HTML and CSS
+          including how to make accessible websites and how to use the
+          CSS flexbox model.
+        </p>
+        <h4>Technologies</h4>
+        <ul>
+          <li>HTML, CSS, JavaScript</li>
+          <li>Jekyll</li>
+          <li>GitHub Pages and GitHub Flavored Markdown</li>
+        </ul>
+        <h4>Links</h4>
+        <ul>
+          <li>
+            <a href="https://mrmaxguns.github.io">
+              My personal website
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/mrmaxguns/mrmaxguns.github.io">
+              The repository with the website code
+            </a>
+          </li>
+        </ul>
+      </article>
+
+      <!-- PROJECT 2: Wonderwords -->
+      <article>
+        <h3>Wonderwords</h3>
+        <p>
+          Wonderwords is a Python library for generating random words
+          and sentences. Working on the project taught me a lot about
+          creating and maintaining a Python library as well as an open
+          source project. I plan to add new features and optimize it
+          further.
+        </p>
+        <h4>Technologies</h4>
+        <ul>
+          <li>Python and packaging Python projects</li>
+          <li>The Python standard library</li>
+          <li>Open source project management</li>
+          <li>Unit tests</li>
+          <li>Command line interfaces</li>
+          <li>Using Sphinx to create documentation</li>
+        </ul>
+        <h4>Links</h4>
+        <ul>
+          <li>
+            <a href="https://github.com/mrmaxguns/wonderwordsmodule">
+              The GitHub repository
+            </a>
+          </li>
+          <li>
+            <a href="https://pypi.org/project/wonderwords">
+              The PyPI page
+            </a>
+          </li>
+          <li>
+            <a href="https://wonderwords.readthedocs.io">
+              The official documentation
+            </a>
+          </li>
+        </ul>
+      </article>
+
+      <!-- PROJECT 3: Dream Journal -->
+      <article>
+        <h3>Dream Journal</h3>
+        <p>
+          Dream Journal is a Python dream journal web application
+          meant to be self-hosted by its user. The app is made with
+          the Python Flask library and is one of my first backend
+          development projects. The app is no longer maintained, but
+          serves as an example of my earlier development work.
+        </p>
+        <h4>Technologies</h4>
+        <ul>
+          <li>Python and Flask</li>
+          <li>HTML, CSS and JavaScript</li>
+          <li>Sqlite database</li>
+          <li>Backend and front-end application development</li>
+          <li>Writing documentation with GitHub pages</li>
+        </ul>
+        <h4>Links</h4>
+        <ul>
+          <li>
+            <a href="https://github.com/mrmaxguns/dream-journal">
+              The GitHub repository
+            </a>
+          </li>
+          <li>
+            <a href="https://mrmaxguns.github.io/dream-journal">
+              The Documentation
+            </a>
+          </li>
+        </ul>
+      </article>
+
+      <!-- PROJECT 4: Please Readme -->
+      <article>
+        <h3>Please Readme</h3>
+        <p>
+          Please Readme is a command-line program to automatically
+          generate READMEs. It is a relatively simple interactive
+          program and was one of my first object-oriented programming
+          projects. Although I haven't worked on it in a while, I have
+          plans to rewrite the library and add many new features.
+        </p>
+        <h4>Technologies</h4>
+        <ul>
+          <li>Python and Argparse</li>
+          <li>Object oriented programming</li>
+          <li>Creating command-line user interfaces</li>
+        </ul>
+        <h4>Links</h4>
+        <ul>
+          <li>
+            <a href="https://github.com/mrmaxguns/please-readme">
+              The GitHub repository
+            </a>
+          </li>
+          <li>
+            <a href="https://pypi.org/project/please-readme">
+              The PyPI project
+            </a>
+          </li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="topic-container" id="contact">
+    <h2>Contact Me</h2>
+    <p>
+      There are a few ways to contact me. They are listed below. Note
+      that as a student, I'm generally very busy and might not reply
+      right away, but I'll try to respond as soon as possible
+      <span aria-label="a simple ASCII smile">:)</span>
+    </p>
+    <address>
+      <ul>
+        <li>
+          For public, programming-related queries, please open a new
+          discussion on
+          <a href="https://github.com/mrmaxguns/mrmaxguns">
+            my GitHub repository</a>.
+        </li>
+        <li>
+          Otherwise, send me an email:
+          <a href="mailto:mrmaxguns@gmail.com">my email address</a>
+        </li>
+      </ul>
+    </address>
+    <p>
+      You can also find me on
+      <a href="https://github.com/mrmaxguns">GitHub</a> and
+      <a href="https://stackoverflow.com/users/13501679/">
+        Stackoverflow</a>.
+    </p>
+    <p>
+      The source code for this site is free software and is available
+      <a href="https://github.com/mrmaxguns/mrmaxguns.github.io">
+        on its GitHub page
+      </a>.
+    </p>
+  </section>
+</main>
+
+<footer class="topic-container" id="footer">
+  <div class="split-align">
+    <p>Copyright &copy; Maxim Rebguns, 2021</p>
+    <p><a href="#top">Back to top</a></p>
+  </div>
+</footer>
+
+<!-- Load interactive scripts. -->
+<script src="/assets/js/home-subtitle.js"></script>
+<script src="/assets/js/home-nav-toggle.js"></script>

@@ -1,0 +1,48 @@
+# Jekyll configuration.
+
+##########
+# General settings
+##########
+
+title: Maxim Rebguns
+description: |
+  The personal website of Maxim Rebguns (@mrmaxguns). This site is
+  also the home of my blog where I write about technology, aviation,
+  mathematics and other subjects that interest me.
+url: https://mrmaxguns.github.io
+social:
+  name: Maxim Rebguns
+  links:
+    - https://github.com/mrmaxguns
+
+permalink: pretty # Omits .html for pages.
+
+##########
+# Defaults
+##########
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      # Disable automatic title creation for posts, as
+      # the "post" layout handles titles differently.
+      disable_auto_title: true
+
+###########
+# Plugins
+###########
+plugins:
+  - jekyll-paginate
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+#
+# Plugin configuration
+#
+
+# Enable pagination.
+paginate: 1 #10
+paginate_path: "/blog/page-:num"

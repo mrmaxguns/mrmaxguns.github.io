@@ -1,0 +1,54 @@
+/*
+ * This file has classes for styling posts.
+ *
+ * Copyright © 2021 Maxim Rebguns
+ *
+ * This file is part of The Blog of Maxim Rebguns.
+ *
+ * The source code of this website is free software: you can redistribute
+ * it and/or modify it under the terms of the GNU Affero General Public
+ * License as published by the Free Software Foundation, either version 3
+ * of the License, or (at your option) any later version.
+ *
+ * The source code of this website is distributed in the hope that it
+ * will be useful, but WITHOUT ANY WARRANTY; without even the implied
+ * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See
+ * the GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public
+ * License along with the source code for this website.  If not, see
+ * <https://www.gnu.org/licenses/>.
+ */
+
+@import "variables";
+
+/* Post tag styling. */
+.post-tag-list { text-align: center; }
+.post-tag-list span.post-tag {
+  padding: 3px 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+
+  color: $theme-light;
+  background-color: $theme-dark-accent;
+  border-radius: 5px;
+}
+/* Post tags used to be links. If I ever make them links,
+   this code will be uncommented. */
+/*
+.post-tag-list a.post-tag:hover,
+.post-tag-list a.post-tag:focus,
+.post-tag-list a.post-tag:active {
+  color: $theme-dark;
+  background-color: $theme-light-accent;
+}
+*/
+
+/* The date of the post. */
+p.post-date {
+  text-align: center;
+  font-style: italic;
+}
+
+/* A link back to the list of posts. */
+p.post-back { text-align: center; }
