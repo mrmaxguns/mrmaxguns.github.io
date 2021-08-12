@@ -1,4 +1,4 @@
-# ![My personal website](https://mrmaxguns.github.io)
+# [My personal website](https://mrmaxguns.github.io)
 
 This is the repository of my personal website. It has just gotten a
 full remake and now no longer uses a Jekyll theme. All stylesheets and
