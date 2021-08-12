@@ -148,10 +148,8 @@ ul.global-nav {
 .split-align p:nth-child(2) { text-align: right; }
 
 
-/*
- * For footer-like elements that need spacing from the
- * main content.
- */
+/* For footer-like elements that need spacing from the
+   main content. */
 .global-footer { margin-top: 40px; }
 
 /*
@@ -249,7 +247,7 @@ ul.global-nav {
     margin-bottom: 20px;
     padding: 10px;
 
-    overflow-x: scroll;
+    overflow-x: auto;
 
     font: 15px "DM Mono", monospace;
     /* The Dracula theme sets the color and background color. */
