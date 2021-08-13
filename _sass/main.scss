@@ -213,8 +213,22 @@ ul.global-nav {
   }
 
   strong { background-color: #dfc3ff; }
-  p code {
-    padding: 2px 5px;
+
+  /* Inline code styling.
+     TODO: Find a more elegant selector. */
+  h1 code,
+  h2 code,
+  h3 code,
+  h4 code,
+  h5 code,
+  h6 code,
+  p code,
+  li code,
+  th code,
+  td code,
+  dt code,
+  dd code {
+    padding: 0 5px;
     margin-left: 3px;
     margin-right: 2px;
 
@@ -350,7 +364,19 @@ ul.global-nav {
     }
 
     strong { background-color: #3d0087; }
-    p code {
+    
+    h1 code,
+    h2 code,
+    h3 code,
+    h4 code,
+    h5 code,
+    h6 code,
+    p code,
+    li code,
+    th code,
+    td code,
+    dt code,
+    dd code {
       color: $theme-primary;
       background-color: $theme-light-accent;
     }
