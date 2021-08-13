@@ -1,5 +1,6 @@
 ---
 title: Choosing the right element – accessible web design
+categories: web
 tags: web accessibility HTML
 ---
 
