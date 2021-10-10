@@ -1,0 +1,120 @@
+@charset "UTF-8";
+/* This file contains styling for the homepage of my blog. The homepage is unique in that it has lots of custom styles not found anywhere else in the site. This Is because the homepage is the most important page of my site, and a pretty homepage makes the reader interested to learn more. Copyright © 2021 Maxim Rebguns This file is part of The Blog of Maxim Rebguns. The source code of this website is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. The source code of this website is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Affero General Public License for more details. You should have received a copy of the GNU Affero General Public License along with the source code for this website.  If not, see <https://www.gnu.org/licenses/>. */
+/* This file defines theme colors, fonts and other stylistic variables and classes used site-wide. Copyright © 2021 Maxim Rebguns This file is part of The Blog of Maxim Rebguns. The source code of this website is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. The source code of this website is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Affero General Public License for more details. You should have received a copy of the GNU Affero General Public License along with the source code for this website.  If not, see <https://www.gnu.org/licenses/>. */
+/* Colors. */
+/* Fonts. */
+/* Used for the site title and other major titles. */
+@font-face { font-family: "Heebo"; src: url("/assets/fonts/Heebo-Bold.woff2") format("woff2"), url("/assets/fonts/Heebo-Bold.woff") format("woff"), url("/assets/fonts/Heebo-Bold.ttf") format("truetype"); font-weight: bold; font-style: normal; font-display: swap; }
+
+/* Used for the site subtitle and code blocks. */
+@font-face { font-family: "DM Mono"; src: url("/assets/fonts/DMMono-Regular.woff2") format("woff2"), url("/assets/fonts/DMMono-Regular.woff") format("woff"), url("/assets/fonts/DMMono-Regular.ttf") format("truetype"); font-weight: normal; font-style: normal; font-display: swap; }
+
+/* Used for the navbar. */
+@font-face { font-family: "Mukta"; src: url("/assets/fonts/Mukta-Light.woff2") format("woff2"), url("/assets/fonts/Mukta-Light.woff") format("woff"), url("/assets/fonts/Mukta-Light.ttf") format("truetype"); font-weight: 300; font-style: normal; font-display: swap; }
+
+/* The sans-serif heading font. */
+@font-face { font-family: "Work Sans"; src: url("/assets/fonts/WorkSans-MediumItalic.woff2") format("woff2"), url("/assets/fonts/WorkSans-MediumItalic.woff") format("woff"), url("/assets/fonts/WorkSans-MediumItalic.ttf") format("truetype"); font-weight: 500; font-style: italic; font-display: swap; }
+
+@font-face { font-family: "Work Sans"; src: url("/assets/fonts/WorkSans-Medium.woff2") format("woff2"), url("/assets/fonts/WorkSans-Medium.woff") format("woff"), url("/assets/fonts/WorkSans-Medium.ttf") format("truetype"); font-weight: 500; font-style: normal; font-display: swap; }
+
+/* The sans-serif text font. */
+@font-face { font-family: "Lato"; src: url("/assets/fonts/Lato-Regular.woff2") format("woff2"), url("/assets/fonts/Lato-Regular.woff") format("woff"), url("/assets/fonts/Lato-Regular.ttf") format("truetype"); font-weight: normal; font-style: normal; font-display: swap; }
+
+/* Miscellaneous variables that are not related to the website theme. Copyright © 2021 Maxim Rebguns This file is part of The Blog of Maxim Rebguns. The source code of this website is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. The source code of this website is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Affero General Public License for more details. You should have received a copy of the GNU Affero General Public License along with the source code for this website.  If not, see <https://www.gnu.org/licenses/>. */
+/* Minimum device sizes for media queries. */
+/* The title container. */
+#title { /* Flexbox model for centering the div inside. */ display: flex; align-items: center; justify-content: center; min-height: 100vh; /* A round gradient as the background. */ background: #69005d; background: radial-gradient(circle, #69005d 0%, #240050 100%); }
+
+.title-text { font: bold 40px "Heebo", sans-serif; color: #F6F6F3; text-align: center; }
+
+.subtitle-text { font: normal 20px "DM Mono", monospace; color: #F6F6F3; text-align: center; }
+
+@media only screen and (min-width: 600px) { .title-text { font-size: 50px; } .subtitle-text { font-size: 30px; } }
+
+@media only screen and (min-width: 768px) { .title-text { font-size: 60px; } .subtitle-text { font-size: 40px; } }
+
+@media only screen and (min-width: 992px) { .title-text { font-size: 70px; } }
+
+/* The navigation container. */
+/* The navbar fade animation on hover. */
+@keyframes nav-item-fade { from { background-color: #1B111B; }
+  to { background-color: #803A49; } }
+
+/* The same fade animation but for the currently active nav item. */
+@keyframes nav-active-item-fade { from { background-color: #F6F6F3; }
+  to { background-color: #93A2D5; } }
+
+#navigation { background-color: #1B111B; }
+
+ul.nav-bar { /* Disable some default CSS list styling. */ margin: 0; padding: 0; overflow: hidden; list-style-type: none; background-color: #1B111B; }
+
+ul.nav-bar { /* `float: none` makes the nav elements go one after the other, which is ideal for small devices. */ /* For the closed navbar (default) all elements except for the toggle should be hidden. */ /* Rule moved after this block as it's supposed to be ul.nav-bar.nav-open li, not ul.nav-bar .nav-open li */ /* .nav-open li { display: block; }*/ /* Animate a nav item to change color on hover. */ /* Override the default nav animation. */ }
+
+ul.nav-bar li { float: none; }
+
+ul.nav-bar li:not(:first-child) { display: none; }
+
+ul.nav-bar a { display: block; padding: 10px 25px; font: 300 20px 'Mukta', sans-serif; color: #F6F6F3; background-color: #1B111B; text-decoration: none; }
+
+ul.nav-bar a:focus, ul.nav-bar a.nav-active:focus { background-color: #803A49; }
+
+ul.nav-bar a:hover { animation-name: nav-item-fade; animation-duration: 1s; /* Keep the colors set by the animation after it's done. */ animation-fill-mode: forwards; }
+
+ul.nav-bar a.nav-active { color: #1B111B; background-color: #F6F6F3; }
+
+ul.nav-bar a.nav-active:hover { animation-name: nav-active-item-fade; animation-duration: 0.5s; animation-fill-mode: forwards; }
+
+ul.nav-bar li.nav-toggle { text-align: center; }
+
+/* If the nav is open, show all nav items. */
+ul.nav-bar.nav-open li { display: block; }
+
+@media only screen and (min-width: 768px) { ul.nav-bar { /* On larger devices we want each nav button to go one after the other starting on the left. */ /* Hide the toggle on larger devices. */ } ul.nav-bar li { display: block; float: left; } ul.nav-bar a { font-size: 25px; border-radius: 5px; } ul.nav-bar li.nav-toggle { display: none; } }
+
+/* Classes for the Skills, Hobbies, Projects and Contact containers as well as the footer. */
+.topic-container { padding: 30px 10%; }
+
+@media only screen and (min-width: 768px) { .topic-container { padding: 40px 15%; } }
+
+@media only screen and (min-width: 992px) { .topic-container { padding: 50px 20%; } }
+
+/* Topic container typography. */
+.topic-container h2, .topic-container h3, .topic-container h4 { margin-top: 20px; }
+
+.topic-container h2 { margin-bottom: 20px; font: 500 40px 'Work Sans', sans-serif; text-align: center; }
+
+.topic-container h3 { margin-bottom: 15px; font: 500 30px 'Work Sans', sans-serif; }
+
+.topic-container h4 { margin-bottom: 15px; font: 500 25px 'Work Sans', sans-serif; }
+
+.topic-container li, .topic-container p { font: normal 18px 'Lato', sans-serif; }
+
+.topic-container p { margin: 15px 0; }
+
+.topic-container ul { padding-left: 30px; margin-left: 0; }
+
+@media only screen and (min-width: 600px) { .topic-container h2 { font-size: 50px; } .topic-container h3 { font-size: 40px; } .topic-container h4 { font-size: 30px; } }
+
+@media only screen and (min-width: 768px) { .topic-container h2 { font-size: 60px; } .topic-container h3 { font-size: 45px; } .topic-container h4 { font-size: 35px; } }
+
+@media only screen and (min-width: 992px) { .topic-container h2 { font-size: 80px; } .topic-container li, .topic-container p { font-size: 22px; } }
+
+/* Container-specific styling. */
+#skills, #projects, #footer { color: #93A2D5; background-color: #240050; }
+
+#skills a, #projects a, #footer a { color: #F6F6F3; }
+
+#skills a:hover, #skills a:focus, #projects a:hover, #projects a:focus, #footer a:hover, #footer a:focus { color: #BFBFBF; }
+
+#hobbies, #contact { color: #F6F6F3; background-color: #1B111B; }
+
+#hobbies a, #contact a { color: #93A2D5; }
+
+#hobbies a:hover, #hobbies a:focus, #contact a:hover, #contact a:focus { color: #B2C3FF; }
+
+/* Multiple projects can be side-by-side on larger devices. */
+.projects-container { display: flex; flex-flow: row wrap; justify-content: flex-start; /* We use a negative margin here to remove the margin from the internal divs around the border of the element to simulate gutters. This will be changed when browsers support gutters for flex items. Relevant document: https://developer.mozilla.org/en-US/docs/Web/... ...CSS/CSS_Flexible_Box_Layout/... ...Mastering_Wrapping_of_Flex_Items#creating_gutters_between_items */ margin: -20px; }
+
+.projects-container article { flex: auto; /* Margins simulate gutters between flex items. See the comment above. */ margin: 20px; width: 400px; }
+
+/*# sourceMappingURL=home.css.map */

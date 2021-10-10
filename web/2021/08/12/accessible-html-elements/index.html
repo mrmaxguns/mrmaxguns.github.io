@@ -1,0 +1,515 @@
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>
+      Choosing the right element – accessible web design –
+      Maxim Rebguns
+    </title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/global/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/global/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/global/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Important metadata -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Jekyll's SEO plugin -->
+    <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Choosing the right element – accessible web design | Maxim Rebguns</title>
+<meta name="generator" content="Jekyll v4.2.1" />
+<meta property="og:title" content="Choosing the right element – accessible web design" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Accessible design means creating software that can be used easily by all users. This entails making sure that any user can easily interact with an application, sometimes with the support of assistive technology like screen readers. Focusing on accessibility is important because people who are affected by blindness and other disabilities will be able to interact with the application in a meaningful way." />
+<meta property="og:description" content="Accessible design means creating software that can be used easily by all users. This entails making sure that any user can easily interact with an application, sometimes with the support of assistive technology like screen readers. Focusing on accessibility is important because people who are affected by blindness and other disabilities will be able to interact with the application in a meaningful way." />
+<link rel="canonical" href="https://mrmaxguns.github.io/web/2021/08/12/accessible-html-elements/" />
+<meta property="og:url" content="https://mrmaxguns.github.io/web/2021/08/12/accessible-html-elements/" />
+<meta property="og:site_name" content="Maxim Rebguns" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-08-12T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Choosing the right element – accessible web design" />
+<script type="application/ld+json">
+{"description":"Accessible design means creating software that can be used easily by all users. This entails making sure that any user can easily interact with an application, sometimes with the support of assistive technology like screen readers. Focusing on accessibility is important because people who are affected by blindness and other disabilities will be able to interact with the application in a meaningful way.","url":"https://mrmaxguns.github.io/web/2021/08/12/accessible-html-elements/","@type":"BlogPosting","headline":"Choosing the right element – accessible web design","dateModified":"2021-08-12T00:00:00+00:00","datePublished":"2021-08-12T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mrmaxguns.github.io/web/2021/08/12/accessible-html-elements/"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="/assets/css/main.css">
+
+    
+  </head>
+  <body>
+    <div id="top">
+      
+
+<div class="narrow">
+  <header class="global-header">
+    <p class="global-site-title">Maxim Rebguns</p>
+    <nav>
+      <ul class="global-nav">
+        
+        <li>
+          <a href="/"
+             >
+            Home
+          </a>
+        </li>
+        
+        <li>
+          <a href="/blog/"
+             >
+            Blog
+          </a>
+        </li>
+        
+        <li>
+          <a href="/documents/"
+             >
+            Documents
+          </a>
+        </li>
+        
+      </ul>
+    </nav>
+  </header>
+
+  <main class="global-stylish">
+    
+
+    
+
+<article>
+  <div>
+    <h1 class="global-title">
+      
+      Choosing the right element – accessible web design
+      
+    </h1>
+    
+    
+    <p class="post-tag-list">
+      
+      <span class="post-tag">web</span>
+      
+      <span class="post-tag">accessibility</span>
+      
+      <span class="post-tag">HTML</span>
+      
+    </p>
+    
+
+    <p class="post-date">Aug 12th, 2021</p>
+  </div>
+  <div>
+    <p>Accessible design means creating software that can be used easily by
+all users. This entails making sure that any user can easily interact
+with an application, sometimes with the support of assistive
+technology like screen readers. Focusing on accessibility is important
+because people who are affected by blindness and other disabilities
+will be able to interact with the application in a meaningful way.</p>
+
+<p>This article aims to illustrate one way to make web pages more
+accessible by outlining various HTML tags that provide semantic
+information about the content and structure of a document. These tags
+allow special software, like screen readers to better understand the
+layout of a document and to make document navigation easier.</p>
+
+<h2 id="a-world-full-of-divs">A world full of <code class="language-plaintext highlighter-rouge">&lt;div&gt;</code>s</h2>
+
+<p>When I fist took up web development, I would separate the content of
+my website with the help of <code class="language-plaintext highlighter-rouge">&lt;div&gt;</code> elements. All regular text would
+simply be put in <code class="language-plaintext highlighter-rouge">&lt;p&gt;</code> elements, while larger text would be put in a
+heading element of the appropriate size. Everything else would be
+styled with CSS. Following this pattern, my websites would usually
+look something like this:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"title"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;h1&gt;</span>My cool website!<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"navigation"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/"</span><span class="nt">&gt;</span>Home<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/about"</span><span class="nt">&gt;</span>About<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/contact"</span><span class="nt">&gt;</span>Contact<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"content"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;h6&gt;</span>Welcome to my site<span class="nt">&lt;/h6&gt;</span>
+  <span class="nt">&lt;p&gt;</span>This site is home to the infamous Cracker Cookie Jr.<span class="nt">&lt;/p&gt;</span>
+
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"section"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h3&gt;</span>Cookies<span class="nt">&lt;/h3&gt;</span>
+    <span class="nt">&lt;p&gt;</span>I think cookies are delicious!<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"section"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h3&gt;</span>Crackers<span class="nt">&lt;/h3&gt;</span>
+    <span class="nt">&lt;p&gt;</span>Crackers are nice, too!<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"comments"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"comment"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;p&gt;</span>I love you Cracker!<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"footer"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;p&gt;</span>Contact me at cookie@example.com.<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;h1&gt;</span>Have a nice day!<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<p>There are a few problems with the accessibility of this page. Let’s
+break down each part of the HTML source to get an idea of what was
+done incorrectly and what can be done to make this HTML more
+accessible.</p>
+
+<h2 id="the-header-element">The <code class="language-plaintext highlighter-rouge">&lt;header&gt;</code> element</h2>
+
+<p>Let’s take a look at the first part of the HTML document:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"title"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;h1&gt;</span>My cool website!<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<p>This part of the document is the title. Most people can tell right
+away by the big bold letters of the <code class="language-plaintext highlighter-rouge">&lt;h1&gt;</code> rendered by the
+browser. But there is an accessibility issue—how does a screen reader
+know that this section is the main document header? It doesn’t, and
+that’s a problem.<sup id="fnref:header-identification" role="doc-noteref"><a href="#fn:header-identification" class="footnote" rel="footnote">1</a></sup></p>
+
+<p>HTML is used to declare document structure. Styling is done via CSS,
+and interactivity is enabled with JavaScript. Software that reads HTML
+looks at the document structure for a variety of purposes, including
+generating a table of contents. Thus, it is highly important to choose
+the most specific element that conveys exactly what role the content
+within it plays.</p>
+
+<p>According to the Mozilla Developer Network (MDN), the <code class="language-plaintext highlighter-rouge">&lt;div&gt;</code> is “the
+generic container for flow content.” It’s a generic container—it
+reveals nothing about the structure of the document. The <code class="language-plaintext highlighter-rouge">&lt;div&gt;</code>
+element should be used to group multiple elements, usually to apply
+specific CSS styling. It shouldn’t be used to indicate document
+structure.</p>
+
+<p>In comes the <code class="language-plaintext highlighter-rouge">&lt;header&gt;</code> element. This element represents a document
+introduction, typically containing a site title, logo and other
+introductory content. In our case, the <code class="language-plaintext highlighter-rouge">&lt;header&gt;</code> element is just what
+we need, so let’s put it in our HTML:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;header&gt;</span>
+  <span class="nt">&lt;h1&gt;</span>My cool website!<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;/header&gt;</span>
+</code></pre></div></div>
+
+<p>Much better. Now, screen readers and other software will know that the
+text enclosed within <code class="language-plaintext highlighter-rouge">&lt;header&gt;</code> is the page header.</p>
+
+<h2 id="the-nav-element">The <code class="language-plaintext highlighter-rouge">&lt;nav&gt;</code> element</h2>
+
+<p>Let’s move on to the next part of our website code.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"navigation"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/"</span><span class="nt">&gt;</span>Home<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/about"</span><span class="nt">&gt;</span>About<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/contact"</span><span class="nt">&gt;</span>Contact<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<p>First, let’s mark the navigation container as, well, a navigation
+container. HTML has the <code class="language-plaintext highlighter-rouge">&lt;nav&gt;</code> element just for that purpose. The
+<code class="language-plaintext highlighter-rouge">&lt;nav&gt;</code> element is used to denote text with one or more links for
+navigational purposes.</p>
+
+<p>However, we’re still not done with this section. Let’s be more
+specific and tell the reader that we have a list of links, using the
+unordered list element (as opposed to just three unrelated
+links). Although the rendered page won’t look like it used
+to,<sup id="fnref:new-list-look" role="doc-noteref"><a href="#fn:new-list-look" class="footnote" rel="footnote">2</a></sup> we can use simple CSS to style the list of links
+back to their original layout. Remember: HTML is for structuring the
+document, CSS is for styling it.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;nav&gt;</span>
+  <span class="nt">&lt;ul&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/"</span><span class="nt">&gt;</span>Home<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/about"</span><span class="nt">&gt;</span>About<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/contact"</span><span class="nt">&gt;</span>Contact<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/nav&gt;</span>
+</code></pre></div></div>
+
+<h2 id="marking-the-main-container">Marking the main container</h2>
+
+<p>The next part of the document is a container with the class
+<code class="language-plaintext highlighter-rouge">content</code>—the main container featuring most of the page’s
+text. Right now, the container is a <code class="language-plaintext highlighter-rouge">&lt;div&gt;</code>, meaning that it doesn’t
+tell us anything about the document structure. To make this part more
+accessible, let’s replace the <code class="language-plaintext highlighter-rouge">&lt;div&gt;</code> with a <code class="language-plaintext highlighter-rouge">&lt;main&gt;</code> element.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">&lt;main&gt;</code> element represents the dominating content of the
+page. The text within this element is typically unique between
+different site pages, unlike the header and footer which typically
+remain the same across multiple pages. Some readers implement a “skip
+to content” feature which use the <code class="language-plaintext highlighter-rouge">&lt;main&gt;</code> element to know where the
+main content is.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;main&gt;</span>
+...
+<span class="nt">&lt;/main&gt;</span>
+</code></pre></div></div>
+
+<h2 id="creating-a-useful-outline">Creating a useful outline</h2>
+
+<p>Let’s move on to the next part of the HTML document—the “Welcome to
+my site” message:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;h6&gt;</span>Welcome to my site<span class="nt">&lt;/h6&gt;</span>
+<span class="nt">&lt;p&gt;</span>This site is home to the infamous Cracker Cookie Jr.<span class="nt">&lt;/p&gt;</span>
+</code></pre></div></div>
+
+<p>Here, the message is wrapped in an <code class="language-plaintext highlighter-rouge">&lt;h6&gt;</code>, although we know it’s not
+actually a heading. In this case the heading element was used to give
+the welcome message a distinct size which we can do with CSS. Headings
+should not be used simply to style content.</p>
+
+<p>The general rule for headings is that the page title is an <code class="language-plaintext highlighter-rouge">&lt;h1&gt;</code>. The
+rest of the headings should be a clear hierarchy. A sub-heading should
+be exactly one less than the parent heading, so an <code class="language-plaintext highlighter-rouge">&lt;h2&gt;</code> would be the
+sub-heading for an <code class="language-plaintext highlighter-rouge">&lt;h1&gt;</code>. This makes outlines generated by screen
+readers and other assistive software much more helpful.</p>
+
+<p>Here is the final HTML for this section. Notice how we added a class
+so that we could later apply CSS styling:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"welcome"</span><span class="nt">&gt;</span>Welcome to my site<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>This site is home to the infamous Cracker Cookie Jr.<span class="nt">&lt;/p&gt;</span>
+</code></pre></div></div>
+
+<h2 id="the-section-element">The <code class="language-plaintext highlighter-rouge">&lt;section&gt;</code> element</h2>
+
+<p>We’ve reached the main content of the page, composed of two distinct
+sections:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"section"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;h3&gt;</span>Cookies<span class="nt">&lt;/h3&gt;</span>
+  <span class="nt">&lt;p&gt;</span>I think cookies are delicious!<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+  
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"section"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;h3&gt;</span>Crackers<span class="nt">&lt;/h3&gt;</span>
+  <span class="nt">&lt;p&gt;</span>Crackers are nice, too!<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<p>As you may have guessed by now, there is a more specific element that
+can be used here. This is a common pattern. Always make sure to use
+the more specific element that accurately portrays the structure of
+the document. Elements can later be styled from their default looks
+with the help of CSS, so rely on an element’s meaning rather than
+default look when creating an HTML document.</p>
+
+<p>In this case, the element is <code class="language-plaintext highlighter-rouge">&lt;section&gt;</code>. The <code class="language-plaintext highlighter-rouge">&lt;section&gt;</code> element
+represents a document section which typically has a heading. Based on
+the heading rule we learned above, the subtitles should be adjusted to
+<code class="language-plaintext highlighter-rouge">&lt;h2&gt;</code>, since they are both children of the main document titled by
+the <code class="language-plaintext highlighter-rouge">&lt;h1&gt;</code> in the <code class="language-plaintext highlighter-rouge">&lt;header&gt;</code> at the top of the page.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;section&gt;</span>
+  <span class="nt">&lt;h2&gt;</span>Cookies<span class="nt">&lt;/h2&gt;</span>
+  <span class="nt">&lt;p&gt;</span>I think cookies are delicious!<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/section&gt;</span>
+
+<span class="nt">&lt;section&gt;</span>
+  <span class="nt">&lt;h2&gt;</span>Crackers<span class="nt">&lt;/h2&gt;</span>
+  <span class="nt">&lt;p&gt;</span>Crackers are nice, too!<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/section&gt;</span>
+</code></pre></div></div>
+
+<h2 id="the-article-element">The <code class="language-plaintext highlighter-rouge">&lt;article&gt;</code> element</h2>
+
+<p>Next come the page comments. Currently they’re just <code class="language-plaintext highlighter-rouge">&lt;div&gt;</code> elements:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"comments"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"comment"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p&gt;</span>I love you Cracker!<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<p>First of all, let’s replace the outer div with a <code class="language-plaintext highlighter-rouge">&lt;section&gt;</code>, since
+the comment section is a distinct section of the document. We can also
+add a “Comments” subtitle. This makes our page more accessible, since
+users relying onassistive technology will know the purpose of the
+section.</p>
+
+<p>Next, we replace each comment with an <code class="language-plaintext highlighter-rouge">&lt;article&gt;</code>. This element
+represents a self-contained piece of content that makes sense even if
+it stands alone. We can also nest <code class="language-plaintext highlighter-rouge">&lt;article&gt;</code>s, although we won’t do
+that in this example.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;section&gt;</span>
+  <span class="nt">&lt;h2&gt;</span>Comments<span class="nt">&lt;/h2&gt;</span>
+  <span class="nt">&lt;article&gt;</span>
+    <span class="nt">&lt;p&gt;</span>I love you Cracker!<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/article&gt;</span>
+<span class="nt">&lt;/section&gt;</span>
+</code></pre></div></div>
+
+<h2 id="fixing-up-the-footer">Fixing up the footer</h2>
+
+<p>The footer has two parts: the contact information and the “Have a nice
+day!” message.</p>
+
+<p>It is important to denote contact information, and it’s done in HTML
+using the <code class="language-plaintext highlighter-rouge">&lt;address&gt;</code> tag. This tag can be used for any contact
+information, not just that of the author of the document.</p>
+
+<p>The second part is the message. Here, it’s marked as a heading, but it
+clearly isn’t one. This is bad practice because, as said above,
+headings denote document structure. Styles can be applied later. We
+can simply apply a class and write a stylesheet to set the font size
+and weight.</p>
+
+<p>The footer itself will be enclosed in a <code class="language-plaintext highlighter-rouge">&lt;footer&gt;</code> element, and
+analogue to the <code class="language-plaintext highlighter-rouge">&lt;header&gt;</code> element, but typically found at the bottom
+of the page and containing links, copyright and contact information.</p>
+
+<p>The resulting HTML is:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;footer&gt;</span>
+  <span class="nt">&lt;address&gt;</span>
+    <span class="c">&lt;!-- We can add a mailto link so that the user is taken
+         to their email application on click. --&gt;</span>
+    <span class="nt">&lt;p&gt;</span>
+      Contact me at
+      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"mailto:cookie@example.com"</span><span class="nt">&gt;</span>cookie@example.com<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/address&gt;</span>
+  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"positive-message"</span><span class="nt">&gt;</span>Have a nice day!<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/footer&gt;</span>
+</code></pre></div></div>
+
+<h2 id="a-world-full-of-meaning">A world full of meaning</h2>
+
+<p>This article took a brief look at some of the HTML elements that can
+be used to make sites more accessible by adding meaning to the content
+within them. With a simple example, we have discovered most of the
+commonly used HTML elements that improve accessibility and make our web
+pages more meaningful. Below is the final code for the example. See
+<a href="#further-reading">Further Reading</a> for a list of resources describing
+web accessibility and the importance of using the correct elements in
+HTML markup.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;header&gt;</span>
+  <span class="nt">&lt;h1&gt;</span>My cool website!<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;/header&gt;</span>
+
+<span class="nt">&lt;nav&gt;</span>
+  <span class="nt">&lt;ul&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/"</span><span class="nt">&gt;</span>Home<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/about"</span><span class="nt">&gt;</span>About<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/contact"</span><span class="nt">&gt;</span>Contact<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/nav&gt;</span>
+
+<span class="nt">&lt;main&gt;</span>
+  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"welcome"</span><span class="nt">&gt;</span>Welcome to my site<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;p&gt;</span>This site is home to the infamous Cracker Cookie Jr.<span class="nt">&lt;/p&gt;</span>
+
+  <span class="nt">&lt;section&gt;</span>
+    <span class="nt">&lt;h2&gt;</span>Cookies<span class="nt">&lt;/h2&gt;</span>
+    <span class="nt">&lt;p&gt;</span>I think cookies are delicious!<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/section&gt;</span>
+
+  <span class="nt">&lt;section&gt;</span>
+    <span class="nt">&lt;h2&gt;</span>Crackers<span class="nt">&lt;/h2&gt;</span>
+    <span class="nt">&lt;p&gt;</span>Crackers are nice, too!<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/section&gt;</span>
+
+  <span class="nt">&lt;section&gt;</span>
+    <span class="nt">&lt;h2&gt;</span>Comments<span class="nt">&lt;/h2&gt;</span>
+    <span class="nt">&lt;article&gt;</span>
+      <span class="nt">&lt;p&gt;</span>I love you Cracker!<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/article&gt;</span>
+  <span class="nt">&lt;/section&gt;</span>
+<span class="nt">&lt;/main&gt;</span>
+
+<span class="nt">&lt;footer&gt;</span>
+  <span class="nt">&lt;address&gt;</span>
+    <span class="nt">&lt;p&gt;</span>
+      Contact me at
+      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"mailto:cookie@example.com"</span><span class="nt">&gt;</span>cookie@example.com<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/address&gt;</span>
+  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"positive-message"</span><span class="nt">&gt;</span>Have a nice day!<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/footer&gt;</span>
+</code></pre></div></div>
+
+<h3 id="further-reading">Further reading</h3>
+
+<ol>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility/HTML">HTML: A good basis for
+accessibility</a>
+– A great article on the topic of HTML accessibility</li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">HTML elements
+reference</a>
+– A reference for HTML tags, classified by category and
+alphabetically</li>
+  <li><a href="https://www.w3.org/standards/webdesign/accessibility.html">Accessibility</a>
+– A page making the case for web accessibility and providing
+examples</li>
+  <li><a href="https://www.w3.org/WAI/fundamentals/accessibility-intro/">Introduction to Web Accessibility
+</a> – An
+introduction to web accessibility</li>
+</ol>
+
+<p>Thanks for reading!</p>
+
+<hr />
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:header-identification" role="doc-endnote">
+      <p>You may be asking: wouldn’t the screen
+reader know that it’s a header, since it contains an H1 element?
+However, the <code class="language-plaintext highlighter-rouge">&lt;h1&gt;</code> element isn’t always found at the header of
+the site (it might only feature a logo or navigation bar). Thus,
+it is important to avoid ambiguity by using this element. <a href="#fnref:header-identification" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:new-list-look" role="doc-endnote">
+      <p>Each link will most likely have a bullet next to it
+and each link will be on a separate line. The exact styling is
+browser-dependent. <a href="#fnref:new-list-look" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+  </div>
+</article>
+
+<div>
+  <p class="post-back">
+    <a href="/blog/">Back to the list of posts</a>
+  </p>
+</div>
+
+  </main>
+
+  <footer class="global-stylish global-footer">
+    <p>
+      <i>Copyright &copy; Maxim Rebguns, 2021</i> &ndash;
+      <a href="https://github.com/mrmaxguns/mrmaxguns.github.io">
+        View source on GitHub
+      </a>
+    </p>
+  </footer>
+</div>
+
+    </div>
+  </body>
+</html>

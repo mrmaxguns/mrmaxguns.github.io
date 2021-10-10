@@ -1,0 +1,196 @@
+@charset "UTF-8";
+/* This is the main file with styles for my blog. It is mostly a set of useful classes that can be applied anywhere within the website. It also features some code to normalize CSS between various browsers. Copyright © 2021 Maxim Rebguns This file is part of The Blog of Maxim Rebguns. The source code of this website is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. The source code of this website is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Affero General Public License for more details. You should have received a copy of the GNU Affero General Public License along with the source code for this website.  If not, see <https://www.gnu.org/licenses/>. */
+/* Miscellaneous variables that are not related to the website theme. Copyright © 2021 Maxim Rebguns This file is part of The Blog of Maxim Rebguns. The source code of this website is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. The source code of this website is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Affero General Public License for more details. You should have received a copy of the GNU Affero General Public License along with the source code for this website.  If not, see <https://www.gnu.org/licenses/>. */
+/* Minimum device sizes for media queries. */
+/* This file defines theme colors, fonts and other stylistic variables and classes used site-wide. Copyright © 2021 Maxim Rebguns This file is part of The Blog of Maxim Rebguns. The source code of this website is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. The source code of this website is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Affero General Public License for more details. You should have received a copy of the GNU Affero General Public License along with the source code for this website.  If not, see <https://www.gnu.org/licenses/>. */
+/* Colors. */
+/* Fonts. */
+/* Used for the site title and other major titles. */
+@font-face { font-family: "Heebo"; src: url("/assets/fonts/Heebo-Bold.woff2") format("woff2"), url("/assets/fonts/Heebo-Bold.woff") format("woff"), url("/assets/fonts/Heebo-Bold.ttf") format("truetype"); font-weight: bold; font-style: normal; font-display: swap; }
+
+/* Used for the site subtitle and code blocks. */
+@font-face { font-family: "DM Mono"; src: url("/assets/fonts/DMMono-Regular.woff2") format("woff2"), url("/assets/fonts/DMMono-Regular.woff") format("woff"), url("/assets/fonts/DMMono-Regular.ttf") format("truetype"); font-weight: normal; font-style: normal; font-display: swap; }
+
+/* Used for the navbar. */
+@font-face { font-family: "Mukta"; src: url("/assets/fonts/Mukta-Light.woff2") format("woff2"), url("/assets/fonts/Mukta-Light.woff") format("woff"), url("/assets/fonts/Mukta-Light.ttf") format("truetype"); font-weight: 300; font-style: normal; font-display: swap; }
+
+/* The sans-serif heading font. */
+@font-face { font-family: "Work Sans"; src: url("/assets/fonts/WorkSans-MediumItalic.woff2") format("woff2"), url("/assets/fonts/WorkSans-MediumItalic.woff") format("woff"), url("/assets/fonts/WorkSans-MediumItalic.ttf") format("truetype"); font-weight: 500; font-style: italic; font-display: swap; }
+
+@font-face { font-family: "Work Sans"; src: url("/assets/fonts/WorkSans-Medium.woff2") format("woff2"), url("/assets/fonts/WorkSans-Medium.woff") format("woff"), url("/assets/fonts/WorkSans-Medium.ttf") format("truetype"); font-weight: 500; font-style: normal; font-display: swap; }
+
+/* The sans-serif text font. */
+@font-face { font-family: "Lato"; src: url("/assets/fonts/Lato-Regular.woff2") format("woff2"), url("/assets/fonts/Lato-Regular.woff") format("woff"), url("/assets/fonts/Lato-Regular.ttf") format("truetype"); font-weight: normal; font-style: normal; font-display: swap; }
+
+/* Reboot. */
+/* CSS Reset -- removes default padding and margins from various elements. This helps remove whitespace from the top of the page in Firefox, for example. */
+* { margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; vertical-align: baseline; background: transparent; }
+
+/* HTML and Body styling. */
+body { background-color: #F6F6F3; }
+
+@media only screen and (prefers-color-scheme: dark) { body { background-color: #240050; } }
+
+/* Classes for block elements. */
+.narrow { margin: 0 5%; }
+
+@media only screen and (min-width: 600px) { .narrow { margin: 0 10%; } }
+
+@media only screen and (min-width: 768px) { .narrow { margin: 0 15%; } }
+
+@media only screen and (min-width: 992px) { .narrow { margin: 0 20%; } }
+
+@media only screen and (min-width: 1200px) { .narrow { margin: 0 25%; } }
+
+/* Global site header. */
+.global-header { margin: 20px 0; }
+
+.global-site-title { font: bold 25px "Heebo", sans-serif; color: #240050; text-align: center; }
+
+ul.global-nav { list-style-type: none; margin: 10px 0; padding: 0; display: flex; flex-flow: row wrap; justify-content: space-around; }
+
+ul.global-nav li { display: inline-block; margin: 0 5px; flex: 1 0 auto; font: 300 20px "Mukta", sans-serif; text-align: center; }
+
+ul.global-nav li a { color: #803A49; }
+
+ul.global-nav li a:focus, ul.global-nav li a:hover { color: #1B111B; }
+
+ul.global-nav li a.global-nav-active { color: #1B111B; font-style: italic; }
+
+ul.global-nav li a.global-nav-active:focus, ul.global-nav li a.global-nav-active:hover { color: #803A49; }
+
+@media only screen and (min-width: 768px) { .global-site-title { font-size: 30px; } ul.global-nav li { font-size: 25px; } }
+
+@media only screen and (prefers-color-scheme: dark) { .global-site-title { color: #93A2D5; } ul.global-nav li a { color: #F6F6F3; } ul.global-nav li a:focus, ul.global-nav li a:hover { color: #93A2D5; } ul.global-nav li a.global-nav-active { color: #93A2D5; } ul.global-nav li a.global-nav-active:focus, ul.global-nav li a.global-nav-active:hover { color: #F6F6F3; } }
+
+/* Styling for text that's left and right aligned: |Left aligned            Right aligned| */
+.split-align { display: flex; flex-flow: row wrap; justify-content: space-between; }
+
+.split-align p { flex: 1 0 auto; }
+
+.split-align p:nth-child(2) { text-align: right; }
+
+/* For footer-like elements that need spacing from the main content. */
+.global-footer { margin-top: 40px; }
+
+/* "Stylish" page content styling. */
+.global-stylish { /* Inline code styling. TODO: Find a more elegant selector. */ }
+
+.global-stylish h1, .global-stylish h2, .global-stylish h3, .global-stylish h4, .global-stylish h5, .global-stylish h6 { margin-top: 20px; margin-bottom: 25px; font-family: 'Work Sans', sans-serif; font-weight: 500; overflow-wrap: break-word; color: #240050; text-align: center; }
+
+.global-stylish h1 { font-size: 30px; }
+
+.global-stylish h2 { font-size: 28px; }
+
+.global-stylish h3 { font-size: 25px; }
+
+.global-stylish h4 { font-size: 23px; }
+
+.global-stylish h5 { font-size: 20px; }
+
+.global-stylish h6 { font-size: 20px; font-style: italic; }
+
+.global-stylish li, .global-stylish p, .global-stylish th, .global-stylish td, .global-stylish dt, .global-stylish dd { font: 18px 'Lato', sans-serif; color: #1B111B; overflow-wrap: break-word; }
+
+.global-stylish li { margin-top: 5px; margin-bottom: 5px; }
+
+.global-stylish p { margin-top: 20px; margin-bottom: 20px; }
+
+.global-stylish a { color: #803A49; }
+
+.global-stylish a:visited { color: #5B2934; }
+
+.global-stylish a:focus, .global-stylish a:hover, .global-stylish a:active { color: #F6F6F3; background-color: #803A49; }
+
+.global-stylish strong { background-color: #dfc3ff; }
+
+.global-stylish h1 code, .global-stylish h2 code, .global-stylish h3 code, .global-stylish h4 code, .global-stylish h5 code, .global-stylish h6 code, .global-stylish p code, .global-stylish li code, .global-stylish th code, .global-stylish td code, .global-stylish dt code, .global-stylish dd code { padding: 0 5px; margin-left: 3px; margin-right: 2px; font-family: "DM Mono", monospace; color: #F6F6F3; background-color: #803A49; border-radius: 5px; }
+
+.global-stylish blockquote { margin-top: 20px; margin-bottom: 20px; margin-left: 5px; border-left: 7px solid #803A49; }
+
+.global-stylish blockquote p { margin-left: 10px; }
+
+.global-stylish ul, .global-stylish ol { margin-top: 10px; margin-bottom: 10px; padding-left: 30px; }
+
+.global-stylish .task-list-item-checkbox { margin-right: 10px; }
+
+.global-stylish pre { margin-top: 20px; margin-bottom: 20px; padding: 10px; overflow-x: auto; font: 15px "DM Mono", monospace; /* The Dracula theme sets the color and background color. */ /*background-color: $theme-light-accent;*/ }
+
+.global-stylish hr { border: 2px solid #803A49; }
+
+.global-stylish img { width: 100%; height: auto; }
+
+.global-stylish table { border-collapse: collapse; }
+
+.global-stylish th, .global-stylish td { padding: 15px; border-bottom: 1px solid #803A49; }
+
+.global-stylish th { font-weight: bold; color: #F6F6F3; background-color: #803A49; }
+
+.global-stylish td { color: #1B111B; }
+
+.global-stylish sup, .global-stylish sub { font-size: 15px; }
+
+.global-stylish sup { vertical-align: super; }
+
+.global-stylish sub { vertical-align: sub; }
+
+.global-stylish dt { font-weight: bold; }
+
+.global-stylish dd { margin-left: 30px; padding-left: 0px; }
+
+@media only screen and (min-width: 768px) { .global-stylish h1, .global-stylish h2, .global-stylish h3, .global-stylish h4, .global-stylish h5, .global-stylish h6 { text-align: left; } .global-stylish h1 { font-size: 40px; } .global-stylish h2 { font-size: 35px; } .global-stylish h3 { font-size: 30px; } .global-stylish h4 { font-size: 25px; } .global-stylish h5, .global-stylish h6 { font-size: 20px; } }
+
+@media only screen and (min-width: 992px) { .global-stylish h1 { font-size: 50px; } .global-stylish h2 { font-size: 42px; } .global-stylish h3 { font-size: 35px; } .global-stylish h4 { font-size: 30px; } .global-stylish h5, .global-stylish h6 { font-size: 25px; } .global-stylish li, .global-stylish p, .global-stylish th, .global-stylish td, .global-stylish dt, .global-stylish dd { font-size: 23px; } .global-stylish ul, .global-stylish ol { padding-left: 35px; } .global-stylish pre { font-size: 20px; } .global-stylish sup, .global-stylish sub { font-size: 20px; } }
+
+@media only screen and (prefers-color-scheme: dark) { .global-stylish h1, .global-stylish h2, .global-stylish h3, .global-stylish h4, .global-stylish h5, .global-stylish h6 { color: #F6F6F3; } .global-stylish li, .global-stylish p, .global-stylish dt, .global-stylish dd { color: #93A2D5; } .global-stylish a { color: #F6F6F3; } .global-stylish a:visited { color: #DEAEFF; } .global-stylish a:focus, .global-stylish a:hover, .global-stylish a:active { color: #240050; background-color: #F6F6F3; } .global-stylish strong { background-color: #3d0087; } .global-stylish h1 code, .global-stylish h2 code, .global-stylish h3 code, .global-stylish h4 code, .global-stylish h5 code, .global-stylish h6 code, .global-stylish p code, .global-stylish li code, .global-stylish th code, .global-stylish td code, .global-stylish dt code, .global-stylish dd code { color: #240050; background-color: #93A2D5; } .global-stylish blockquote { border-left-color: #93A2D5; } .global-stylish hr { border-color: #F6F6F3; } .global-stylish th, .global-stylish td { border-bottom-color: #93A2D5; } .global-stylish th { color: #240050; background-color: #93A2D5; } .global-stylish td { color: #93A2D5; } }
+
+.global-stylish h1.global-title { text-align: center; }
+
+/* The theme for code blocks. Dracula Theme v1.2.5 https://github.com/zenorocha/dracula-theme Copyright 2016, All rights reserved Code licensed under the MIT license http://zenorocha.mit-license.org @author Rob G <wowmotty@gmail.com> @author Chris Bracco <chris@cbracco.me> @author Zeno Rocha <hi@zenorocha.com> @author Piruin Panichphol <piruin.p@gmail.com> */
+/* Variables */
+/* Styles */
+.highlight { background: #282a36; color: #f8f8f2; }
+
+.highlight .hll, .highlight .s, .highlight .sa, .highlight .sb, .highlight .sc, .highlight .dl, .highlight .sd, .highlight .s2, .highlight .se, .highlight .sh, .highlight .si, .highlight .sx, .highlight .sr, .highlight .s1, .highlight .ss { color: #f1fa8c; }
+
+.highlight .go { color: #44475a; }
+
+.highlight .err, .highlight .g, .highlight .l, .highlight .n, .highlight .x, .highlight .p, .highlight .ge, .highlight .gr, .highlight .gh, .highlight .gi, .highlight .gp, .highlight .gs, .highlight .gu, .highlight .gt, .highlight .ld, .highlight .no, .highlight .nd, .highlight .ni, .highlight .ne, .highlight .nn, .highlight .nx, .highlight .py, .highlight .w, .highlight .bp { color: #f8f8f2; }
+
+.highlight .gh, .highlight .gi, .highlight .gu { font-weight: bold; }
+
+.highlight .ge { text-decoration: underline; }
+
+.highlight .bp { font-style: italic; }
+
+.highlight .c, .highlight .ch, .highlight .cm, .highlight .cpf, .highlight .c1, .highlight .cs { color: #6272a4; }
+
+.highlight .kd, .highlight .kt, .highlight .nb, .highlight .nl, .highlight .nv, .highlight .vc, .highlight .vg, .highlight .vi, .highlight .vm { color: #8be9fd; }
+
+.highlight .kd, .highlight .nb, .highlight .nl, .highlight .nv, .highlight .vc, .highlight .vg, .highlight .vi, .highlight .vm { font-style: italic; }
+
+.highlight .na, .highlight .nc, .highlight .nf, .highlight .fm { color: #50fa7b; }
+
+.highlight .k, .highlight .o, .highlight .cp, .highlight .kc, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .nt, .highlight .ow { color: #ff79c6; }
+
+.highlight .m, .highlight .mb, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .mo, .highlight .il { color: #bd93f9; }
+
+.highlight .gd { color: #ff5555; }
+
+/* This file has classes for styling posts. Copyright © 2021 Maxim Rebguns This file is part of The Blog of Maxim Rebguns. The source code of this website is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. The source code of this website is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Affero General Public License for more details. You should have received a copy of the GNU Affero General Public License along with the source code for this website.  If not, see <https://www.gnu.org/licenses/>. */
+/* Miscellaneous variables that are not related to the website theme. Copyright © 2021 Maxim Rebguns This file is part of The Blog of Maxim Rebguns. The source code of this website is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. The source code of this website is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Affero General Public License for more details. You should have received a copy of the GNU Affero General Public License along with the source code for this website.  If not, see <https://www.gnu.org/licenses/>. */
+/* Minimum device sizes for media queries. */
+/* Post tag styling. */
+.post-tag-list { text-align: center; }
+
+.post-tag-list span.post-tag { padding: 3px 10px; margin-left: 5px; margin-right: 5px; color: #F6F6F3; background-color: #803A49; border-radius: 5px; }
+
+/* Post tags used to be links. If I ever make them links, this code will be uncommented. */
+/* .post-tag-list a.post-tag:hover, .post-tag-list a.post-tag:focus, .post-tag-list a.post-tag:active { color: $theme-dark; background-color: $theme-light-accent; } */
+/* The date of the post. */
+p.post-date { text-align: center; font-style: italic; }
+
+/* A link back to the list of posts. */
+p.post-back { text-align: center; }
+
+/*# sourceMappingURL=main.css.map */
