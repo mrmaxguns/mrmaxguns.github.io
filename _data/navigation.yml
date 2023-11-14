@@ -3,6 +3,6 @@
 - name: Blog
   page: blog/index.html
 - name: Documents
-  page: documents.md
+  page: documents/index.md
 #- name: CV
 #  page: cv.html
