@@ -1,8 +1,0 @@
-- name: Home
-  page: index.html
-- name: Blog
-  page: blog/index.html
-- name: Documents
-  page: documents/index.md
-#- name: CV
-#  page: cv.html
