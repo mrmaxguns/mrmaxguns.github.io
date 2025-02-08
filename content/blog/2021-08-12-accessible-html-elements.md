@@ -1,6 +1,6 @@
 +++
 title = "Choosing the right element – accessible web design"
-aliases = ["/blog/web/2021/08/12/accessible-html-elements/", "/blog/web/2021/08/12/accessible-html-elements.html"]
+aliases = ["/web/2021/08/12/accessible-html-elements/", "/web/2021/08/12/accessible-html-elements.html"]
 summary = """Accessible design means thinking beyond the average user and ensuring
 that every human being can meaningfully interact with software. This article explores
 using semantic HTML to make webpages screen reader-friendly."""

@@ -1,6 +1,6 @@
 +++
 title = "My Journey in Architecture"
-aliases = ["/blog/architecture/2024/06/25/russian-school-architecture/", "/blog/architecture/2024/06/25/russian-school-architecture.html"]
+aliases = ["/architecture/2024/06/25/russian-school-architecture/", "/architecture/2024/06/25/russian-school-architecture.html"]
 summary = """After two years of working on an architectural project, it is ready
 to see the light of day. Read about my exploration of an architect's work, starting
 at the sketch phase, and ending with a fully-working 2D and 3D model ready to

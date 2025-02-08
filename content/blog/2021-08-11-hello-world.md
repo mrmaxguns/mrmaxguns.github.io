@@ -1,6 +1,6 @@
 +++
 title = "Hello, World!"
-aliases = ["/blog/meta/2021/08/11/hello-world/", "/blog/meta/2021/08/11/hello-world.html"]
+aliases = ["/meta/2021/08/11/hello-world/", "/meta/2021/08/11/hello-world.html"]
 summary = """This is my first ever post. It is mostly just a test of the blogging
 platform. You won't find any interesting content here."""
 date = 2021-08-11
