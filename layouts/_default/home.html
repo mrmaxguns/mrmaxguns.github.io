@@ -1,0 +1,26 @@
+{{ define "css" }}
+  {{ $homeStyle := resources.Get "sass/home.scss" | css.Sass | resources.Minify | resources.Fingerprint }}
+  <link rel="stylesheet" href="{{ $homeStyle.Permalink }}">
+{{ end }}
+
+{{ define "head" }}
+  {{ $spamspan := resources.Get "js/spamspan.js" | js.Build "main.js" | minify | fingerprint }}
+  <script type="text/javascript" src="{{ $spamspan.Permalink }}"></script>
+{{ end }}
+
+{{ define "main" }}
+  <h1 id="site-title"><span><span>{{ .Site.Title }}</span></span></h1>
+  <ul id="contacts">
+    <li>
+      <span class="spamspan">
+        <span class="u">machomaksims</span>
+        [at]
+        <span class="d">gmail [dot] com</span>
+      </span>
+    </li>
+    <li><a href="https://github.com/mrmaxguns">GitHub</a></li>
+    <li><a href="https://www.linkedin.com/in/maxim-rebguns/">Linkedin</a></li>
+  </ul>
+  {{ .Content }}
+{{ end }}
+

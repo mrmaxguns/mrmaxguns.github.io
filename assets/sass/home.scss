@@ -1,0 +1,46 @@
+@import "main.scss";
+
+
+#site-title {
+  font-family: "Fraunces", serif;
+  font-size: calc(clamp(35px, 10vw, 15vh));
+  font-variation-settings: "wght" 600, "SOFT" 30;
+  text-align: center;
+  color: $text-color;
+
+  margin-bottom: 5vh;
+
+  span {
+    display: inline-block;
+    transform: skew(20deg);
+    background-color: $emphasis-bg-1;
+
+    padding-left: 10px;
+    padding-right: 10px;
+
+    span {
+      transform: skew(-20deg);
+      background-color: transparent;
+    }
+  }
+}
+
+#contacts {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px 20px;
+
+  padding: 0;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+
+  list-style-type: none;
+
+  li {
+    font-family: "Orbiter";
+    font-size: calc(max(20px, 1.3vw));
+  }
+}

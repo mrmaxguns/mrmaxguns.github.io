@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Accessibility on Maxim Rebguns</title>
+    <link>http://localhost:1313/tags/accessibility/</link>
+    <description>Recent content in Accessibility on Maxim Rebguns</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <copyright>Copyright Maxim Rebguns 2024. All rights reserved unless otherwise indicated.</copyright>
+    <lastBuildDate>Thu, 12 Aug 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/accessibility/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Choosing the right element – accessible web design</title>
+      <link>http://localhost:1313/blog/2021-08-12-accessible-html-elements/</link>
+      <pubDate>Thu, 12 Aug 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2021-08-12-accessible-html-elements/</guid>
+      <description>Accessible design means thinking beyond the average user and ensuring&#xA;that every human being can meaningfully interact with software. This article explores&#xA;using semantic HTML to make webpages screen reader-friendly.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+{{ define "main" }}
+  <h1>{{ .Title }}</h1>
+
+  {{ .Content }}
+
+  <hr>
+  <p><strong>Written:</strong> {{ .Date | time.Format ":date_medium" }}</p>
+  <p><strong>Last updated:</strong> {{ .Lastmod | time.Format ":date_medium" }}</p>
+  {{ with .Param "tags" }}
+  <p>
+    <strong>Explore similar content:</strong>
+    {{ range $index, $tag := (. | sort) }} 
+      {{ with $.Site.GetPage (printf "/%s/%s" "tags" $tag) }}
+        <a href="{{ .Permalink }}">#{{ $tag | urlize }}</a>
+      {{ end }}
+    {{ end }}
+  <p>
+  {{ end }}
+{{ end }}

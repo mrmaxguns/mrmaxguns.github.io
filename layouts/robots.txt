@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: {{ urls.JoinPath site.BaseURL .Sitemap.Filename }}

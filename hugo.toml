@@ -1,0 +1,48 @@
+baseURL = "https://mrmaxguns.github.io"
+languageCode = "en-us"
+title = "Maxim Rebguns"
+copyright = "Copyright Maxim Rebguns 2024. All rights reserved unless otherwise indicated."
+
+enableRobotsTXT = true
+enableGitInfo = true
+
+[menus]
+  [[menus.main]]
+    name = 'Home'
+    pageRef = '/'
+    weight = 1
+  [[menus.main]]
+    name = 'Blog'
+    pageRef = '/blog'
+    weight = 2
+  [[menus.main]]
+    name = 'Documents'
+    pageRef = '/documents'
+    weight = 3
+
+[markup]
+  [markup.highlight]
+    style = 'tango'
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.goldmark.extensions]
+    strikethrough = false
+    [markup.goldmark.extensions.passthrough]
+      enable = true
+      [markup.goldmark.extensions.passthrough.delimiters]
+        block = [['\[', '\]'], ['$$', '$$']]
+        inline = [['\(', '\)']]
+    [markup.goldmark.extensions.extras]
+      [markup.goldmark.extensions.extras.superscript]
+        enable = true
+      [markup.goldmark.extensions.extras.subscript]
+        enable = true
+      [markup.goldmark.extensions.extras.delete]
+        enable = true
+
+[params]
+math = false # Set only on pages that require it
+
+[taxonomies]
+tag = 'tags'

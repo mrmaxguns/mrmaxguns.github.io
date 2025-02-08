@@ -1,0 +1,61 @@
+{{ if .Params.raw }}
+{{ .Content }}
+{{ else }}
+<!doctype html>
+<html lang="{{ or site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ .Title }} | {{ .Site.Title }}</title>
+
+  {{ $description := "The official website of Maxim Rebguns." }}
+  {{ if .Description }}{{ $description = .Description }}{{ else if .Summary }}{{ $description = .Summary }}{{ end }}
+
+  <meta name="description" content="{{ $description }}">
+  <meta property="og:description" content="{{ $description }}">
+  <meta property="og:title" content="{{ .Title }}">
+  <meta name="twitter:card" content="{{ $description }}">
+
+  {{ with .OutputFormats.Get "rss" -}}
+    {{ printf `<link rel=%q type=%q href=%q title=%q>` .Rel .MediaType.Type .Permalink site.Title | safeHTML }}
+  {{ end }}
+
+  {{ block "css" . }}
+  {{ $mainStyle := resources.Get "sass/main.scss" | css.Sass | resources.Minify | resources.Fingerprint }}
+  <link rel="stylesheet" href="{{ $mainStyle.Permalink }}">
+  {{ end }}
+
+  {{ if .Param "math" }}
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script>
+    MathJax = {
+      tex: {
+        displayMath: [['\\[', '\\]'], ['$$', '$$']],
+        inlineMath: [['\\(', '\\)']]
+      },
+      loader:{
+        load: ['ui/safe']
+      },
+    };
+  </script>
+  {{ end }}
+
+  {{ block "head" . }}{{ end }}
+</head>
+<body>
+  <div id="content">
+    {{ block "header" . }}
+      <header>
+        {{ partial "nav.html" . }}
+      </header>
+    {{ end }}
+    <main>
+      {{ block "main" . }}{{ end }}
+    </main>
+    {{ block "footer" . }}
+      {{ partial "footer.html" . }}
+    {{ end }}
+  </div>
+</body>
+</html>
+{{ end }}

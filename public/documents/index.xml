@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Documents on Maxim Rebguns</title>
+    <link>http://localhost:1313/documents/</link>
+    <description>Recent content in Documents on Maxim Rebguns</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <copyright>Copyright Maxim Rebguns 2024. All rights reserved unless otherwise indicated.</copyright>
+    <lastBuildDate>Tue, 25 Jun 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/documents/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>New Russian School</title>
+      <link>http://localhost:1313/documents/russian-architecture/</link>
+      <pubDate>Tue, 25 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/documents/russian-architecture/</guid>
+      <description>My goal in this project was to design a completely new building for&#xA;the Russian School of Austin. Follow along with me in my journey through the world&#xA;of architecture as I sketch, plan, and model a building from the ground up.</description>
+    </item>
+    <item>
+      <title>Bitwise Operators and Bitboards</title>
+      <link>http://localhost:1313/documents/bitwise-bitboards/</link>
+      <pubDate>Mon, 13 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/documents/bitwise-bitboards/</guid>
+      <description>&lt;em&gt;Bitwise Operators and Bitboards&lt;/em&gt; is an interactive presentation about the importance&#xA;of bitwise operators, and demonstrates one application of them: bitboards. The presentation is&#xA;intended for those new to low-level programming and can be presented in about 15 minutes.</description>
+    </item>
+  </channel>
+</rss>
