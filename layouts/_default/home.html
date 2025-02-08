@@ -5,7 +5,7 @@
 
 {{ define "head" }}
   {{ $spamspan := resources.Get "js/spamspan.js" | js.Build "main.js" | minify | fingerprint }}
-  <script type="text/javascript" src="{{ $spamspan.Permalink }}"></script>
+  <script src="{{ $spamspan.Permalink }}"></script>
 {{ end }}
 
 {{ define "main" }}
