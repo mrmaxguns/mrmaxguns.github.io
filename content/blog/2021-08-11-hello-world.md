@@ -132,7 +132,7 @@ reference-style link to [GitHub].
 
 What a wonderful image to test the responsiveness:
 
-![A placeholder image](https://via.placeholder.com/2000x500)
+![A placeholder image](https://placehold.co/2000x500)
 
 ## Tables
 
